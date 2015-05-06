@@ -1,4 +1,4 @@
-	Readme.txt
+	Readme
 
 Lien vers l'image Docker du serveur HTTP Apache :
 https://registry.hub.docker.com/_/httpd/
