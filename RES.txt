@@ -1,0 +1,26 @@
+
+Telechargement de l'image docker HTTPD
+docker pull httpd
+
+docker images
+Affiche les image Docker
+
+docker run httpd echo "hello world" 
+Lance l'image httpd avec la commande echo comme parametre
+Suivre: https://registry.hub.docker.com/_/httpd/
+
+Demmarer un Containaire
+docker run -d --name my-apache-app -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+lancer pour explorer, de bas quand on utilise une image, il va lire la derniere ligne, nous 
+se que l'on veut c'est faire un shell, il faut lancher un bash, nous llons override la derniere commande
+le -rm efface le containe quand nous le quittons, sans le rm, il sera la mais il ne trourne plus
+docker run -it -rm --name my-apache-app httpd:2.4 bash -l
+cette commande nous permetrat d'explorer le dossier appache, on peut faire un ls.
+docker ps -a
+affiche les prosses qui tournent
+docker rm <ID> 
+Supprime le container
+
+
+Fontend en PHP
+BackEnd NodJS
