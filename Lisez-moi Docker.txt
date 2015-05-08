@@ -1,0 +1,39 @@
+		Lisez-moi Docker
+
+
+	Image du serveur HTTP Apache (httpd ou httpd:2.4)
+
+Lien vers l'image Docker du serveur HTTP Apache :
+https://registry.hub.docker.com/_/httpd/
+
+Pour lancer l'image avec la commande bash -l (pour y lancer le bash) :
+docker run -it --rm --name my-apache-app httpd:2.4 bash -l
+
+Pour lancer l'image et la garder ouverte :
+docker run -d --name my-apache-app httpd:2.4
+Il est ensuite possible de s'y connecter comme ceci :
+telnet <IP_du_container>
+Trouver l'IP avec un docker inspect <nom_container> | grep -i ipadd
+
+
+	Liste des commandes Docker
+
+Lister les containers :
+docker ps -a
+
+Démarrer une image :
+docker run --name <nom_du_container_a_creer> <nom_de_l_image> <commande>
+Pour démarrer une image et la laisser tourner en tâche de fond :
+docker run -d --name <nom_du_container_a_creer> <nom_de_l_image> <commande>
+
+Terminer un container :
+docker stop <ID> ou <nom>
+
+Effacer un container :
+docker rm <ID> ou <nom>
+
+Terminer un container et l'effacer :
+docker rm -f <ID> ou <nom>
+
+Consulter un container :
+docker inspect <nom_du_container>
