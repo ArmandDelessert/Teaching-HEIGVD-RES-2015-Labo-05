@@ -1,0 +1,35 @@
+		RES Labo intro Vagrant
+
+--------------------------------------------------------------------------------
+	Commandes Vagrant
+
+Démarrer la VM Vagrant :
+	Dans le dossier "Teaching-HEIGVD-RES-2015-Vagrant\box\", tapez la commande :
+		vagrant up
+	Cette commande installe, configure (si nécessaire) et démarre la VM.
+
+Se connecter à la VM :
+		vagrant ssh
+
+Se déconnecter de la VM :
+	Entrer l'une des commandes suivantes :
+		exit
+		logout
+
+Suspendre la VM (après déconnexion de la VM) :
+		vagrant suspend
+
+Eteindre la VM (après déconnexion de la VM) :
+		vagrant halt
+
+--------------------------------------------------------------------------------
+	Répertoires Vagrant
+
+Le répertoire Windows "Teaching-HEIGVD-RES-2015-Vagrant\box\" est un répertoire
+partagé avec la VM Vagrant. Il correspond dans la VM au répertoire "/vagrant/".
+
+Le labo 2 doit être forké puis clôné dans la VM mais faire un git clone depuis
+la VM impose de reconfigurer la clé SSH. Il est aussi possible de cloner le
+labo depuis Windows dans le dossier "Teaching-HEIGVD-RES-2015-Vagrant\box\" et
+le labo se retrouvera dans le dossier "/vagrant/" dans la VM.
+--------------------------------------------------------------------------------
