@@ -61,6 +61,15 @@ docker run -p <port_machine_vagrant:port_container_docker>
 docker run -p 80:80
 IP de la machine Vagrant : http://192.168.42.42/:80
 
+----------------------------------------
+
+		DockerUI
+
+Lancer la commande suivante dans Vagrant :
+docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock dockerui/dockerui
+
+L'interface graphique pour Docker est disponible à l'adresse suivante :
+http://192.168.42.42:9000/
 
 ----------------------------------------
 
