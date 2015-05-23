@@ -29,4 +29,4 @@ EXPOSE 3000
 # With CMD, we start the PM2 process manager. The process manager is responsible
 # for starting the node.js script (the express.js app)
 #
-CMD pm2 start -x /front-end/bin/www --no-daemon
+CMD /front_end/start.sh

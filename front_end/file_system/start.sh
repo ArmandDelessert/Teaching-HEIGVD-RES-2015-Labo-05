@@ -1,0 +1,1 @@
+pm2 start -x /front_end/bin/www --no-daemon
