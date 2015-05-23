@@ -23,7 +23,7 @@ RUN npm install -g pm2@0.12.9
 WORKDIR /front_end/
 RUN npm install
 
-EXPOSE 3333
+EXPOSE 3000
 
 #
 # With CMD, we start the PM2 process manager. The process manager is responsible
