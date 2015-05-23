@@ -1,8 +1,6 @@
 import socket, time
 
-ip_destination = '255.1.1.1'; 
-port_destination = 8000; 
-BEAT_PERIOD = 1
+SERVER_IP = '255.1.1.1'; SERVER_PORT = 8000; BEAT_PERIOD = 1
 
 while True:
     hbSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
