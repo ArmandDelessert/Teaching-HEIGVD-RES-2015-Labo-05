@@ -1,30 +1,27 @@
-		Lisez-moi Docker
-
-
-	Image du serveur HTTP Apache (httpd ou httpd:2.4)
-
-Lien vers l'image Docker du serveur HTTP Apache :
-https://registry.hub.docker.com/_/httpd/
-
-Pour lancer l'image avec la commande bash -l (pour y lancer le bash) :
-docker run -it --rm --name my-apache-app httpd:2.4 bash -l
-
-Pour lancer l'image et la garder ouverte :
-docker run -d --name my-apache-app httpd:2.4
-Il est ensuite possible de s'y connecter comme ceci :
-telnet <IP_du_container>
-Trouver l'IP avec un docker inspect <nom_container> | grep -i ipadd
+			Lisez-moi Docker
 
 
 	Liste des commandes Docker
 
-Lister les containers :
-docker ps -a
+Télécharger une image Docker depuis le Docker Hub :
+docker pull <nom_de_l_image_docker>
 
-Démarrer une image :
+Lister les images téléchargées :
+docker images
+
+Construire une image Docker depuis le dossier courant
+docker build -t <nom_de_l_image_docker>
+
+Démarrer une image (ce qui créra un container) :
 docker run --name <nom_du_container_a_creer> <nom_de_l_image> <commande>
 Pour démarrer une image et la laisser tourner en tâche de fond :
 docker run -d --name <nom_du_container_a_creer> <nom_de_l_image> <commande>
+
+Exemple :
+docker run httpd echo "hello world"
+
+Lister les containers :
+docker ps -a
 
 Terminer un container :
 docker stop <ID> ou <nom>
@@ -37,3 +34,67 @@ docker rm -f <ID> ou <nom>
 
 Consulter un container :
 docker inspect <nom_du_container>
+
+
+		Image du serveur HTTP Apache (httpd ou httpd:2.4)
+
+Lien vers l'image Docker du serveur HTTP Apache :
+https://registry.hub.docker.com/_/httpd/
+
+Pour lancer l'image avec la commande bash -l (pour y lancer le bash) :
+docker run -it --rm --name my-apache-app httpd:2.4 bash -l
+
+	Pour lancer l'image et la garder ouverte :
+docker run -d --name my-apache-app httpd:2.4
+Il est ensuite possible de s'y connecter comme ceci :
+telnet <IP_du_container>
+Trouver l'IP avec un docker inspect <nom_container> | grep -i ipadd
+
+	Lancer le bash dans un container Docker
+docker run --rm -it <nom_image_docker> bash -l
+
+	Monter un volume dans le container Docker
+docker run -v "/fichier_sur_vagrant:/fichier_sur_docker"
+
+	Exposer un port du container Docker sur la machine Vagrant
+docker run -p <port_machine_vagrant:port_container_docker>
+docker run -p 80:80
+IP de la machine Vagrant : http://192.168.42.42/:80
+
+----------------------------------------
+
+		DockerUI
+
+Lancer la commande suivante dans Vagrant :
+docker run -d -p 9000:9000 --privileged -v /var/run/docker.sock:/var/run/docker.sock dockerui/dockerui
+
+L'interface graphique pour Docker est disponible à l'adresse suivante :
+http://192.168.42.42:9000/
+
+----------------------------------------
+
+		Lancer le serveur back_end
+
+Créer l'image Docker du serveur back_end :
+Dans la machine Vagrant :
+cd /vagrant/back_end
+Dans ce répertoire se trouve le fichier "Dockerfile" et le dossier "file_system".
+Lancer la commande suivante pour créer l'image Docker :
+docker build -t back_end
+
+
+Lancer un serveur HTTP écoutant sur le port 80 :
+docker run -p 3000:3000 -d --name back_end back_end
+
+
+Envoyer une requête HTTP au serveur depuis la machine locale :
+Ressource à récupérer : 192.168.42.42:3000/api/message	
+
+Connexion au serveur (avec l'adresse IP de la machine Vagrant) :
+telnet 192.168.42.42 3000
+
+Envoi de la requête HTTP (avec l'adresse IP du container Docker) :
+GET /api/message http/1.1
+Host: 172.17.0.21
+
+----------------------------------------
