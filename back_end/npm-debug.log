@@ -1,0 +1,446 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'pm2@0.12.9' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'pm2@0.12.9', null ]
+5 verbose cache add name=undefined spec="pm2@0.12.9" args=["pm2@0.12.9",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'pm2@0.12.9',
+6 verbose parsed url   path: 'pm2@0.12.9',
+6 verbose parsed url   href: 'pm2@0.12.9' }
+7 verbose cache add name="pm2" spec="0.12.9" args=["pm2","0.12.9"]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '0.12.9',
+8 verbose parsed url   path: '0.12.9',
+8 verbose parsed url   href: '0.12.9' }
+9 verbose addNamed [ 'pm2', '0.12.9' ]
+10 verbose addNamed [ '0.12.9', '0.12.9' ]
+11 silly lockFile 5f694f44-pm2-0-12-9 pm2@0.12.9
+12 verbose lock pm2@0.12.9 /home/vagrant/.npm/5f694f44-pm2-0-12-9.lock
+13 verbose url raw pm2/0.12.9
+14 verbose url resolving [ 'https://registry.npmjs.org/', './pm2/0.12.9' ]
+15 verbose url resolved https://registry.npmjs.org/pm2/0.12.9
+16 info trying registry request attempt 1 at 09:57:51
+17 http GET https://registry.npmjs.org/pm2/0.12.9
+18 http 200 https://registry.npmjs.org/pm2/0.12.9
+19 silly registry.get cb [ 200,
+19 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+19 silly registry.get     etag: '"97GR6RF7DPWKQ1XERIZYP0QAJ"',
+19 silly registry.get     'content-type': 'application/json',
+19 silly registry.get     'cache-control': 'max-age=60',
+19 silly registry.get     'content-length': '3047',
+19 silly registry.get     'accept-ranges': 'bytes',
+19 silly registry.get     date: 'Sat, 23 May 2015 09:57:57 GMT',
+19 silly registry.get     via: '1.1 varnish',
+19 silly registry.get     age: '0',
+19 silly registry.get     connection: 'keep-alive',
+19 silly registry.get     'x-served-by': 'cache-fra1220-FRA',
+19 silly registry.get     'x-cache': 'MISS',
+19 silly registry.get     'x-cache-hits': '0',
+19 silly registry.get     'x-timer': 'S1432375076.281821,VS0,VE812',
+19 silly registry.get     vary: 'Accept' } ]
+20 silly lockFile 7f959010-try-npmjs-org-pm2-pm2-0-12-9-tgz https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz
+21 verbose lock https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz /home/vagrant/.npm/7f959010-try-npmjs-org-pm2-pm2-0-12-9-tgz.lock
+22 verbose addRemoteTarball [ 'https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz',
+22 verbose addRemoteTarball   'eabe270bf85baf6bc05823a23134065f19c60cfb' ]
+23 info retry fetch attempt 1 at 09:57:57
+24 verbose fetch to= /home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/tmp.tgz
+25 http GET https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz
+26 http 200 https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz
+27 verbose tar unpack /home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/tmp.tgz
+28 silly lockFile dd30c116-7123-0-24548965506255627-package tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+29 verbose lock tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package /home/vagrant/.npm/dd30c116-7123-0-24548965506255627-package.lock
+30 silly lockFile 554299a2-7123-0-24548965506255627-tmp-tgz tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/tmp.tgz
+31 verbose lock tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/tmp.tgz /home/vagrant/.npm/554299a2-7123-0-24548965506255627-tmp-tgz.lock
+32 silly gunzTarPerm modes [ '755', '644' ]
+33 silly gunzTarPerm extractEntry package.json
+34 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+35 silly gunzTarPerm extractEntry .npmignore
+36 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+37 silly gunzTarPerm extractEntry README.md
+38 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+39 silly gunzTarPerm extractEntry LICENSE
+40 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+41 silly gunzTarPerm extractEntry constants.js
+42 silly gunzTarPerm modified mode [ 'constants.js', 436, 420 ]
+43 silly gunzTarPerm extractEntry env.js
+44 silly gunzTarPerm modified mode [ 'env.js', 436, 420 ]
+45 silly gunzTarPerm extractEntry index.js
+46 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+47 silly gunzTarPerm extractEntry GNU-AGPL-3.0.txt
+48 silly gunzTarPerm modified mode [ 'GNU-AGPL-3.0.txt', 436, 420 ]
+49 silly gunzTarPerm extractEntry .gitattributes
+50 silly gunzTarPerm modified mode [ '.gitattributes', 436, 420 ]
+51 silly gunzTarPerm extractEntry .editorconfig
+52 silly gunzTarPerm modified mode [ '.editorconfig', 436, 420 ]
+53 silly gunzTarPerm extractEntry bin/pm2
+54 silly gunzTarPerm modified mode [ 'bin/pm2', 509, 493 ]
+55 silly gunzTarPerm extractEntry .travis.yml
+56 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+57 silly gunzTarPerm extractEntry ADVANCED_README.md
+58 silly gunzTarPerm modified mode [ 'ADVANCED_README.md', 436, 420 ]
+59 silly gunzTarPerm extractEntry CHANGELOG.md
+60 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+61 silly gunzTarPerm extractEntry lib/CLI.js
+62 silly gunzTarPerm modified mode [ 'lib/CLI.js', 436, 420 ]
+63 silly gunzTarPerm extractEntry lib/Worker.js
+64 silly gunzTarPerm modified mode [ 'lib/Worker.js', 436, 420 ]
+65 silly gunzTarPerm extractEntry lib/God.js
+66 silly gunzTarPerm modified mode [ 'lib/God.js', 436, 420 ]
+67 silly gunzTarPerm extractEntry lib/HttpInterface.js
+68 silly gunzTarPerm modified mode [ 'lib/HttpInterface.js', 436, 420 ]
+69 silly gunzTarPerm extractEntry lib/Event.js
+70 silly gunzTarPerm modified mode [ 'lib/Event.js', 436, 420 ]
+71 silly gunzTarPerm extractEntry lib/Log.js
+72 silly gunzTarPerm modified mode [ 'lib/Log.js', 436, 420 ]
+73 silly gunzTarPerm extractEntry lib/Modularizer.js
+74 silly gunzTarPerm modified mode [ 'lib/Modularizer.js', 436, 420 ]
+75 silly gunzTarPerm extractEntry lib/Monit.js
+76 silly gunzTarPerm modified mode [ 'lib/Monit.js', 436, 420 ]
+77 silly gunzTarPerm extractEntry lib/CliUx.js
+78 silly gunzTarPerm modified mode [ 'lib/CliUx.js', 436, 420 ]
+79 silly gunzTarPerm extractEntry lib/Satan.js
+80 silly gunzTarPerm modified mode [ 'lib/Satan.js', 436, 420 ]
+81 silly gunzTarPerm extractEntry lib/Configuration.js
+82 silly gunzTarPerm modified mode [ 'lib/Configuration.js', 436, 420 ]
+83 silly gunzTarPerm extractEntry lib/TreeKill.js
+84 silly gunzTarPerm modified mode [ 'lib/TreeKill.js', 436, 420 ]
+85 silly gunzTarPerm extractEntry lib/Common.js
+86 silly gunzTarPerm modified mode [ 'lib/Common.js', 436, 420 ]
+87 silly gunzTarPerm extractEntry lib/Utility.js
+88 silly gunzTarPerm modified mode [ 'lib/Utility.js', 436, 420 ]
+89 silly gunzTarPerm extractEntry lib/Watcher.js
+90 silly gunzTarPerm modified mode [ 'lib/Watcher.js', 436, 420 ]
+91 silly gunzTarPerm extractEntry lib/ProcessContainer.js
+92 silly gunzTarPerm modified mode [ 'lib/ProcessContainer.js', 436, 420 ]
+93 silly gunzTarPerm extractEntry lib/Interactor/Cipher.js
+94 silly gunzTarPerm modified mode [ 'lib/Interactor/Cipher.js', 436, 420 ]
+95 silly gunzTarPerm extractEntry lib/Interactor/Daemon.js
+96 silly gunzTarPerm modified mode [ 'lib/Interactor/Daemon.js', 436, 420 ]
+97 silly gunzTarPerm extractEntry lib/Interactor/Filter.js
+98 silly gunzTarPerm modified mode [ 'lib/Interactor/Filter.js', 436, 420 ]
+99 silly gunzTarPerm extractEntry lib/Interactor/HttpRequest.js
+100 silly gunzTarPerm modified mode [ 'lib/Interactor/HttpRequest.js', 436, 420 ]
+101 silly gunzTarPerm extractEntry lib/Interactor/InteractorDaemonizer.js
+102 silly gunzTarPerm modified mode [ 'lib/Interactor/InteractorDaemonizer.js', 436, 420 ]
+103 silly gunzTarPerm extractEntry lib/Interactor/PushInteractor.js
+104 silly gunzTarPerm modified mode [ 'lib/Interactor/PushInteractor.js', 436, 420 ]
+105 silly gunzTarPerm extractEntry lib/Interactor/ReverseInteractor.js
+106 silly gunzTarPerm modified mode [ 'lib/Interactor/ReverseInteractor.js', 436, 420 ]
+107 silly gunzTarPerm extractEntry lib/Interactor/Tools.js
+108 silly gunzTarPerm modified mode [ 'lib/Interactor/Tools.js', 436, 420 ]
+109 silly gunzTarPerm extractEntry lib/Interactor/WatchDog.js
+110 silly gunzTarPerm modified mode [ 'lib/Interactor/WatchDog.js', 436, 420 ]
+111 silly gunzTarPerm extractEntry lib/Interactor/pm2-interface.js
+112 silly gunzTarPerm modified mode [ 'lib/Interactor/pm2-interface.js', 436, 420 ]
+113 silly gunzTarPerm extractEntry lib/God/ActionMethods.js
+114 silly gunzTarPerm modified mode [ 'lib/God/ActionMethods.js', 436, 420 ]
+115 silly gunzTarPerm extractEntry lib/God/ClusterMode.js
+116 silly gunzTarPerm modified mode [ 'lib/God/ClusterMode.js', 436, 420 ]
+117 silly gunzTarPerm extractEntry lib/God/DeprecatedCalls.js
+118 silly gunzTarPerm modified mode [ 'lib/God/DeprecatedCalls.js', 436, 420 ]
+119 silly gunzTarPerm extractEntry lib/God/ForkMode.js
+120 silly gunzTarPerm modified mode [ 'lib/God/ForkMode.js', 436, 420 ]
+121 silly gunzTarPerm extractEntry lib/God/LockSystem.js
+122 silly gunzTarPerm modified mode [ 'lib/God/LockSystem.js', 436, 420 ]
+123 silly gunzTarPerm extractEntry lib/God/Methods.js
+124 silly gunzTarPerm modified mode [ 'lib/God/Methods.js', 436, 420 ]
+125 silly gunzTarPerm extractEntry lib/God/Reload.js
+126 silly gunzTarPerm modified mode [ 'lib/God/Reload.js', 436, 420 ]
+127 silly gunzTarPerm extractEntry lib/interpreter.json
+128 silly gunzTarPerm modified mode [ 'lib/interpreter.json', 436, 420 ]
+129 silly gunzTarPerm extractEntry lib/samples/sample-conf.js
+130 silly gunzTarPerm modified mode [ 'lib/samples/sample-conf.js', 436, 420 ]
+131 silly gunzTarPerm extractEntry lib/samples/sample.json5
+132 silly gunzTarPerm modified mode [ 'lib/samples/sample.json5', 436, 420 ]
+133 silly gunzTarPerm extractEntry lib/schema.json
+134 silly gunzTarPerm modified mode [ 'lib/schema.json', 436, 420 ]
+135 silly gunzTarPerm extractEntry lib/scripts/io.keymetrics.PM2.plist
+136 silly gunzTarPerm modified mode [ 'lib/scripts/io.keymetrics.PM2.plist', 436, 420 ]
+137 silly gunzTarPerm extractEntry lib/scripts/pm2
+138 silly gunzTarPerm modified mode [ 'lib/scripts/pm2', 436, 420 ]
+139 silly gunzTarPerm extractEntry lib/scripts/pm2-init-amazon.sh
+140 silly gunzTarPerm modified mode [ 'lib/scripts/pm2-init-amazon.sh', 436, 420 ]
+141 silly gunzTarPerm extractEntry lib/scripts/pm2-init-centos.sh
+142 silly gunzTarPerm modified mode [ 'lib/scripts/pm2-init-centos.sh', 436, 420 ]
+143 silly gunzTarPerm extractEntry lib/scripts/pm2-init.sh
+144 silly gunzTarPerm modified mode [ 'lib/scripts/pm2-init.sh', 436, 420 ]
+145 silly gunzTarPerm extractEntry lib/scripts/pm2.service
+146 silly gunzTarPerm modified mode [ 'lib/scripts/pm2.service', 436, 420 ]
+147 silly gunzTarPerm extractEntry lib/tmp
+148 silly gunzTarPerm modified mode [ 'lib/tmp', 436, 420 ]
+149 silly gunzTarPerm extractEntry lib/tools/Config.js
+150 silly gunzTarPerm modified mode [ 'lib/tools/Config.js', 436, 420 ]
+151 silly gunzTarPerm extractEntry lib/tools/VersionManagement.js
+152 silly gunzTarPerm modified mode [ 'lib/tools/VersionManagement.js', 436, 420 ]
+153 silly gunzTarPerm extractEntry lib/tools/json5.js
+154 silly gunzTarPerm modified mode [ 'lib/tools/json5.js', 436, 420 ]
+155 silly gunzTarPerm extractEntry CONTRIBUTING.md
+156 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 436, 420 ]
+157 silly lockFile dd30c116-7123-0-24548965506255627-package tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+158 silly lockFile dd30c116-7123-0-24548965506255627-package tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+159 silly lockFile 554299a2-7123-0-24548965506255627-tmp-tgz tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/tmp.tgz
+160 silly lockFile 554299a2-7123-0-24548965506255627-tmp-tgz tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/tmp.tgz
+161 verbose tar pack [ '/home/vagrant/.npm/pm2/0.12.9/package.tgz',
+161 verbose tar pack   '/home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package' ]
+162 verbose tarball /home/vagrant/.npm/pm2/0.12.9/package.tgz
+163 verbose folder /home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+164 silly lockFile dd30c116-7123-0-24548965506255627-package tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+165 verbose lock tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package /home/vagrant/.npm/dd30c116-7123-0-24548965506255627-package.lock
+166 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+167 verbose lock tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz /home/vagrant/.npm/383fa0bd-grant-npm-pm2-0-12-9-package-tgz.lock
+168 silly lockFile dd30c116-7123-0-24548965506255627-package tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+169 silly lockFile dd30c116-7123-0-24548965506255627-package tar:///home/vagrant/tmp/npm-19495-pTsgQ-zQ/1432375077123-0.24548965506255627/package
+170 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+171 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+172 silly lockFile 40e41070-e-vagrant-npm-pm2-0-12-9-package /home/vagrant/.npm/pm2/0.12.9/package
+173 verbose lock /home/vagrant/.npm/pm2/0.12.9/package /home/vagrant/.npm/40e41070-e-vagrant-npm-pm2-0-12-9-package.lock
+174 silly lockFile 40e41070-e-vagrant-npm-pm2-0-12-9-package /home/vagrant/.npm/pm2/0.12.9/package
+175 silly lockFile 40e41070-e-vagrant-npm-pm2-0-12-9-package /home/vagrant/.npm/pm2/0.12.9/package
+176 verbose tar unpack /home/vagrant/.npm/pm2/0.12.9/package.tgz
+177 silly lockFile 95649752-e-vagrant-npm-pm2-0-12-9-package tar:///home/vagrant/.npm/pm2/0.12.9/package
+178 verbose lock tar:///home/vagrant/.npm/pm2/0.12.9/package /home/vagrant/.npm/95649752-e-vagrant-npm-pm2-0-12-9-package.lock
+179 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+180 verbose lock tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz /home/vagrant/.npm/383fa0bd-grant-npm-pm2-0-12-9-package-tgz.lock
+181 silly gunzTarPerm modes [ '755', '644' ]
+182 silly gunzTarPerm extractEntry package.json
+183 silly gunzTarPerm extractEntry .npmignore
+184 silly gunzTarPerm extractEntry README.md
+185 silly gunzTarPerm extractEntry LICENSE
+186 silly gunzTarPerm extractEntry constants.js
+187 silly gunzTarPerm extractEntry env.js
+188 silly gunzTarPerm extractEntry index.js
+189 silly gunzTarPerm extractEntry bin/pm2
+190 silly gunzTarPerm extractEntry .gitattributes
+191 silly gunzTarPerm extractEntry .travis.yml
+192 silly gunzTarPerm extractEntry CHANGELOG.md
+193 silly gunzTarPerm extractEntry ADVANCED_README.md
+194 silly gunzTarPerm extractEntry CONTRIBUTING.md
+195 silly gunzTarPerm extractEntry GNU-AGPL-3.0.txt
+196 silly gunzTarPerm extractEntry lib/CLI.js
+197 silly gunzTarPerm extractEntry lib/Worker.js
+198 silly gunzTarPerm extractEntry lib/God.js
+199 silly gunzTarPerm extractEntry lib/HttpInterface.js
+200 silly gunzTarPerm extractEntry lib/Event.js
+201 silly gunzTarPerm extractEntry lib/Log.js
+202 silly gunzTarPerm extractEntry lib/Modularizer.js
+203 silly gunzTarPerm extractEntry lib/Monit.js
+204 silly gunzTarPerm extractEntry lib/CliUx.js
+205 silly gunzTarPerm extractEntry lib/Satan.js
+206 silly gunzTarPerm extractEntry lib/Configuration.js
+207 silly gunzTarPerm extractEntry lib/TreeKill.js
+208 silly gunzTarPerm extractEntry lib/Common.js
+209 silly gunzTarPerm extractEntry lib/Utility.js
+210 silly gunzTarPerm extractEntry lib/Watcher.js
+211 silly gunzTarPerm extractEntry lib/ProcessContainer.js
+212 silly gunzTarPerm extractEntry lib/Interactor/Cipher.js
+213 silly gunzTarPerm extractEntry lib/Interactor/Daemon.js
+214 silly gunzTarPerm extractEntry lib/Interactor/Filter.js
+215 silly gunzTarPerm extractEntry lib/Interactor/HttpRequest.js
+216 silly gunzTarPerm extractEntry lib/Interactor/InteractorDaemonizer.js
+217 silly gunzTarPerm extractEntry lib/Interactor/PushInteractor.js
+218 silly gunzTarPerm extractEntry lib/Interactor/ReverseInteractor.js
+219 silly gunzTarPerm extractEntry lib/Interactor/Tools.js
+220 silly gunzTarPerm extractEntry lib/Interactor/WatchDog.js
+221 silly gunzTarPerm extractEntry lib/Interactor/pm2-interface.js
+222 silly gunzTarPerm extractEntry lib/God/ActionMethods.js
+223 silly gunzTarPerm extractEntry lib/God/ClusterMode.js
+224 silly gunzTarPerm extractEntry lib/God/DeprecatedCalls.js
+225 silly gunzTarPerm extractEntry lib/God/ForkMode.js
+226 silly gunzTarPerm extractEntry lib/God/LockSystem.js
+227 silly gunzTarPerm extractEntry lib/God/Methods.js
+228 silly gunzTarPerm extractEntry lib/God/Reload.js
+229 silly gunzTarPerm extractEntry lib/interpreter.json
+230 silly gunzTarPerm extractEntry lib/samples/sample-conf.js
+231 silly gunzTarPerm extractEntry lib/samples/sample.json5
+232 silly gunzTarPerm extractEntry lib/schema.json
+233 silly gunzTarPerm extractEntry lib/scripts/io.keymetrics.PM2.plist
+234 silly gunzTarPerm extractEntry lib/scripts/pm2
+235 silly gunzTarPerm extractEntry lib/scripts/pm2-init-amazon.sh
+236 silly gunzTarPerm extractEntry lib/scripts/pm2-init-centos.sh
+237 silly gunzTarPerm extractEntry lib/scripts/pm2-init.sh
+238 silly gunzTarPerm extractEntry lib/scripts/pm2.service
+239 silly gunzTarPerm extractEntry lib/tmp
+240 silly gunzTarPerm extractEntry lib/tools/Config.js
+241 silly gunzTarPerm extractEntry lib/tools/VersionManagement.js
+242 silly gunzTarPerm extractEntry lib/tools/json5.js
+243 silly gunzTarPerm extractEntry .editorconfig
+244 silly lockFile 95649752-e-vagrant-npm-pm2-0-12-9-package tar:///home/vagrant/.npm/pm2/0.12.9/package
+245 silly lockFile 95649752-e-vagrant-npm-pm2-0-12-9-package tar:///home/vagrant/.npm/pm2/0.12.9/package
+246 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+247 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+248 verbose chmod /home/vagrant/.npm/pm2/0.12.9/package.tgz 644
+249 verbose chown /home/vagrant/.npm/pm2/0.12.9/package.tgz [ 1000, 1000 ]
+250 silly lockFile 7f959010-try-npmjs-org-pm2-pm2-0-12-9-tgz https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz
+251 silly lockFile 7f959010-try-npmjs-org-pm2-pm2-0-12-9-tgz https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz
+252 silly lockFile 5f694f44-pm2-0-12-9 pm2@0.12.9
+253 silly lockFile 5f694f44-pm2-0-12-9 pm2@0.12.9
+254 silly resolved [ { name: 'pm2',
+254 silly resolved     preferGlobal: 'true',
+254 silly resolved     version: '0.12.9',
+254 silly resolved     engines: { node: '>=0.10' },
+254 silly resolved     directories: { bin: './bin', lib: './lib', example: './examples' },
+254 silly resolved     author:
+254 silly resolved      { name: 'Strzelewicz Alexandre',
+254 silly resolved        email: 'as@unitech.io',
+254 silly resolved        url: 'https://keymetrics.io' },
+254 silly resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+254 silly resolved     contributors:
+254 silly resolved      [ [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object],
+254 silly resolved        [Object] ],
+254 silly resolved     homepage: 'https://github.com/Unitech/pm2',
+254 silly resolved     description: 'Production process manager for Node.JS applications with a built-in load balancer.',
+254 silly resolved     main: 'index.js',
+254 silly resolved     scripts: { test: 'NODE_ENV=test bash test/index.sh && NODE_ENV=test bash test/main.sh' },
+254 silly resolved     keywords:
+254 silly resolved      [ 'cli',
+254 silly resolved        'fault tolerant',
+254 silly resolved        'sysadmin',
+254 silly resolved        'tools',
+254 silly resolved        'pm2',
+254 silly resolved        'logs',
+254 silly resolved        'log',
+254 silly resolved        'json',
+254 silly resolved        'express',
+254 silly resolved        'hapi',
+254 silly resolved        'kraken',
+254 silly resolved        'reload',
+254 silly resolved        'microservice',
+254 silly resolved        'programmatic',
+254 silly resolved        'harmony',
+254 silly resolved        'node-pm2',
+254 silly resolved        'production',
+254 silly resolved        'keymetrics',
+254 silly resolved        'deploy',
+254 silly resolved        'deployment',
+254 silly resolved        'daemon',
+254 silly resolved        'supervisor',
+254 silly resolved        'nodemon',
+254 silly resolved        'pm2.io',
+254 silly resolved        'ghost',
+254 silly resolved        'ghost production',
+254 silly resolved        'monitoring',
+254 silly resolved        'process manager',
+254 silly resolved        'forever',
+254 silly resolved        'forever-monitor',
+254 silly resolved        'keep process alive',
+254 silly resolved        'process configuration',
+254 silly resolved        'clustering',
+254 silly resolved        'cluster cli',
+254 silly resolved        'cluster',
+254 silly resolved        'cron',
+254 silly resolved        'devops',
+254 silly resolved        'dev ops' ],
+254 silly resolved     bin: { pm2: './bin/pm2' },
+254 silly resolved     dependencies:
+254 silly resolved      { async: '~0.9.0',
+254 silly resolved        chalk: '~0.5.1',
+254 silly resolved        chokidar: '~0.12.0',
+254 silly resolved        'cli-table': '0.3.1',
+254 silly resolved        'coffee-script': '1.8.0',
+254 silly resolved        colors: '1.0.3',
+254 silly resolved        commander: '2.6.0',
+254 silly resolved        cron: '1.0.5',
+254 silly resolved        debug: '2.1.0',
+254 silly resolved        eventemitter2: '0.4.14',
+254 silly resolved        'json-stringify-safe': '5.0.0',
+254 silly resolved        moment: '2.9.0',
+254 silly resolved        nssocket: '0.5.3',
+254 silly resolved        pidusage: '0.1.1',
+254 silly resolved        pmx: 'latest',
+254 silly resolved        vizion: 'latest',
+254 silly resolved        'pm2-axon': 'latest',
+254 silly resolved        'pm2-axon-rpc': '0.3.6',
+254 silly resolved        'pm2-deploy': 'latest',
+254 silly resolved        'pm2-multimeter': '0.1.2',
+254 silly resolved        shelljs: '0.3.0',
+254 silly resolved        isbinaryfile: '^2.0.3',
+254 silly resolved        semver: '4.3.1',
+254 silly resolved        'pm2-logs': '~0.1.1',
+254 silly resolved        ikt: 'git+http://ikt.pm2.io/ikt.git#master' },
+254 silly resolved     devDependencies:
+254 silly resolved      { mocha: '^1.20.1',
+254 silly resolved        should: '^4.0.0',
+254 silly resolved        'better-assert': '^1.0.0',
+254 silly resolved        'promise-spawner': '^0.0.3',
+254 silly resolved        punt: '*' },
+254 silly resolved     optionalDependencies:
+254 silly resolved      { 'pm2-logs': '~0.1.1',
+254 silly resolved        ikt: 'git+http://ikt.pm2.io/ikt.git#master' },
+254 silly resolved     bugs: { url: 'https://github.com/Unitech/pm2/issues' },
+254 silly resolved     repository: { type: 'git', url: 'git://github.com/Unitech/pm2.git' },
+254 silly resolved     license: 'AGPLv3',
+254 silly resolved     readme: '![PM2](https://github.com/unitech/pm2/raw/master/pres/pm2.20d3ef.png)\n\nPM2 is a production process manager for Node.js applications with a built-in load balancer. It allows you to keep applications alive forever, to reload them without downtime and to facilitate common system admin tasks.\n\nPM2 is constantly assailed by [more than 400 tests](https://travis-ci.org/Unitech/PM2).\n\nCompatible with [io.js](https://github.com/iojs/io.js) and [Node.js](https://github.com/joyent/node).\nCompatible with CoffeeScript.\nWorks on Linux (stable) & MacOSx (stable) & Windows (stable).\n\n[![NPM version](https://badge.fury.io/js/pm2.png)](http://badge.fury.io/js/pm2) [![Gitter](https://badges.gitter.im/Join Chat.svg)] (https://gitter.im/Unitech/PM2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://api.travis-ci.org/Unitech/PM2.png?branch=master)](https://travis-ci.org/Unitech/PM2) [![Inline docs](http://inch-ci.org/github/unitech/pm2.svg?branch=master)](http://inch-ci.org/github/unitech/pm2)\n\n\n[![NPM](https://nodei.co/npm/pm2.png?downloads=true&downloadRank=true)](https://nodei.co/npm/pm2/)\n\n## Install PM2\n\n```bash\n$ npm install pm2 -g\n```\n\n*npm is a builtin CLI when you install Node.js - [Installing Node.js or io.js with NVM](https://keymetrics.io/2015/02/03/installing-node-js-and-io-js-with-nvm/)*\n\n## Start an application\n\n```bash\n$ pm2 start app.js\n```\n\n## Main features\n\n### Process management\n\nOnce apps are started you can list and manage them easily:\n\n![Process listing](https://github.com/unitech/pm2/raw/master/pres/pm2-list.png)\n\nListing all running processes:\n\n```bash\n$ pm2 list\n```\n\nManaging your processes is straightforward:\n\n```bash\n$ pm2 stop     <app_name|id|all>\n$ pm2 restart  <app_name|id|all>\n$ pm2 delete   <app_name|id|all>\n```\n\nTo have more details on a specific process:\n\n```bash\n$ pm2 describe 0\n```\n\n### Monitoring\n\n![Monit](https://github.com/unitech/pm2/raw/master/pres/pm2-monit.png)\n\nMonitoring all processes launched:\n\n```bash\n$ pm2 monit\n```\n\n### Log facilities\n\n![Monit](https://github.com/unitech/pm2/raw/master/pres/pm2-logs.png)\n\nDisplaying logs of a specified process or all processes, in real time:\n\n```bash\n$ pm2 logs\n$ pm2 logs big-api\n$ pm2 flush          # Clear all the logs\n```\n\n### Load balancing / 0s reload downtime\n\nWhen an app is started with the -i <worker number> option, the **cluster** mode is enabled.\n\n**Warning**: It\'s still a beta feature. If you want to use the embed cluster module or reload with 0s downtime, we recommend the use of node#0.12.0+ node#0.11.16+ or io.js#1.0.2+. We do not support node#0.10.* cluster module anymore!\n\nWith the cluster mode, PM2 enables load balancing between each worker.\nEach HTTP/TCP/UDP request will be forwarded to one specific process at a time.\n\n```bash\n$ pm2 start app.js -i max  # Enable load-balancer and cluster features\n\n$ pm2 reload all           # Reload all apps in 0s manner\n```\n\n### Startup script generation\n\nPM2 can generate and configure a startup script to keep PM2 and your processes alive at every server restart.\n\n```bash\n$ pm2 startup\n# auto-detect platform\n$ pm2 startup [platform]\n# render startup-script for a specific platform, the [platform] could be one of:\n#   ubuntu|centos|redhat|gentoo|systemd|darwin|amazon\n```\n\nTo save a process list just do:\n\n```bash\n$ pm2 save\n```\n\n## Keymetrics monitoring\n\n![Keymetrics Dashboard](https://keymetrics.io/assets/images/application-demo.png)\n\nIf you manage your NodeJS app with PM2, Keymetrics makes it easy to monitor and manage apps accross servers.\nFeel free to try it:\n\n[Discover the monitoring dashboard for PM2](https://app.keymetrics.io/#/register)\n\nThanks in advance and we hope that you like PM2!\n\n## Other PM2 features\n\n- [Watch & Restart](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md#a890)\n- [JSON application declaration](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md#a10)\n- [Using PM2 in your code](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md#programmatic-example)\n- [Deployment workflow](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md#deployment)\n- [Startup script generation (SystemV/Ubuntu/Gentoo/AWS)](https://github.com/Unitech/PM2/blob/master/ADVANCED_README.md#startup-script)\n- [Advanced log management (flush, reload, ilogs)](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md#9)\n- [GracefullReload](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md#a690)\n\n## Learn more about PM2\n\n[Advanced README.md](https://github.com/Unitech/PM2/blob/development/ADVANCED_README.md)\n\n## Changelog\n\n[CHANGELOG](https://github.com/Unitech/PM2/blob/master/CHANGELOG.md)\n\n## Contributors\n\n[Contributors](https://github.com/Unitech/PM2/graphs/contributors)\n\n## License\n\nPM2 is made available under the terms of the GNU Affero General Public License 3.0 (AGPL 3.0).\nFor other license [contact us](https://keymetrics.io/contact/).\n\n[![Analytics](https://ga-beacon.appspot.com/UA-51734350-4/Unitech/pm2?pixel)](https://github.com/Unitech/pm2)\n',
+254 silly resolved     readmeFilename: 'README.md',
+254 silly resolved     _id: 'pm2@0.12.9',
+254 silly resolved     dist: { shasum: '0a4de0fd2cceb5f8e720899afbb4aad92477c7ab' },
+254 silly resolved     _from: 'pm2@0.12.9',
+254 silly resolved     _resolved: 'https://registry.npmjs.org/pm2/-/pm2-0.12.9.tgz' } ]
+255 info install pm2@0.12.9 into /usr/local/lib
+256 info installOne pm2@0.12.9
+257 info /usr/local/lib/node_modules/pm2 unbuild
+258 verbose tar unpack /home/vagrant/.npm/pm2/0.12.9/package.tgz
+259 silly lockFile a4481f10-r-usr-local-lib-node-modules-pm2 tar:///usr/local/lib/node_modules/pm2
+260 verbose lock tar:///usr/local/lib/node_modules/pm2 /home/vagrant/.npm/a4481f10-r-usr-local-lib-node-modules-pm2.lock
+261 silly lockFile 383fa0bd-grant-npm-pm2-0-12-9-package-tgz tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz
+262 verbose lock tar:///home/vagrant/.npm/pm2/0.12.9/package.tgz /home/vagrant/.npm/383fa0bd-grant-npm-pm2-0-12-9-package-tgz.lock
+263 silly gunzTarPerm modes [ '755', '644' ]
+264 error Error: EACCES, mkdir '/usr/local/lib/node_modules'
+264 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules']
+264 error   errno: 3,
+264 error   code: 'EACCES',
+264 error   path: '/usr/local/lib/node_modules',
+264 error   fstream_type: 'Directory',
+264 error   fstream_path: '/usr/local/lib/node_modules/pm2',
+264 error   fstream_class: 'DirWriter',
+264 error   fstream_stack:
+264 error    [ '/usr/lib/nodejs/fstream/lib/writer.js:171:23',
+264 error      '/usr/lib/nodejs/mkdirp/index.js:37:53',
+264 error      'Object.oncomplete (fs.js:107:15)' ] }
+265 error Please try running this command again as root/Administrator.
+266 error System Linux 3.13.0-24-generic
+267 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "pm2@0.12.9"
+268 error cwd /vagrant/back_end
+269 error node -v v0.10.25
+270 error npm -v 1.3.10
+271 error path /usr/local/lib/node_modules
+272 error fstream_path /usr/local/lib/node_modules/pm2
+273 error fstream_type Directory
+274 error fstream_class DirWriter
+275 error code EACCES
+276 error errno 3
+277 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules'
+278 error fstream_stack /usr/lib/nodejs/fstream/lib/writer.js:171:23
+278 error fstream_stack /usr/lib/nodejs/mkdirp/index.js:37:53
+278 error fstream_stack Object.oncomplete (fs.js:107:15)
+279 verbose exit [ 3, true ]

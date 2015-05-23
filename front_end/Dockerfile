@@ -12,7 +12,7 @@ MAINTAINER Simon Baehler
 # When we create the image, we copy files from the host into
 # the image file system. This is NOT a shared folder!
 #
-COPY file_system /font_end/
+COPY file_system /front_end/
 
 #
 # With RUN, we can execute commands when we create the image. Here,
@@ -29,4 +29,4 @@ EXPOSE 3000
 # With CMD, we start the PM2 process manager. The process manager is responsible
 # for starting the node.js script (the express.js app)
 #
-CMD pm2 start -x /front_end/bin/www --no-daemon
+CMD pm2 start -x /front-end/bin/www --no-daemon
