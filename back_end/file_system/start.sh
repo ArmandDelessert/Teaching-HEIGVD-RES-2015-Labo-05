@@ -1,1 +1,1 @@
-node /backend/back_end.js &
+node /backend/back_end.js
