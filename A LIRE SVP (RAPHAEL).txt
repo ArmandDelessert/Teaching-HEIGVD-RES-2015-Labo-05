@@ -1,0 +1,14 @@
+reste à faire
+
+partie UDP (heartbeat) avec modification du httpd.conf du proxy (j'essaierais de le faire demain si j'y arrive
+partie front end - voir bug ajax
+partie back end terminée
+
+bien entendu, il faudra encore intégrer    heartbeat  dans backend et front end,   et aussi un programme controller qui sera chargé de modifier
+le httpd du reverse proxy
+
+pour tester les containers :
+
+docker run -d backend
+docker run -d frontend
+docker run -d -p 3000:80 -v "/vagrant/reverse_proxy/config/httpd.conf:/usr/local/apache2/conf/httpd.conf" reverseproxy
