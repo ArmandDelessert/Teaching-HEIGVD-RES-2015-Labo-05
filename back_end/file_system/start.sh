@@ -1,2 +1,1 @@
-/back_end/bin/www &
-/back_end/python heartbeat.py &
+node /backend/back_end.js &
