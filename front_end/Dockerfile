@@ -1,10 +1,11 @@
-FROM httpd
+FROM node
 
 MAINTAINER Raphael Racine
 
-COPY config/httpd.conf /usr/local/apache2/conf/httpd.conf
 COPY start.sh /front_end/start.sh
-COPY www/index.html /usr/local/apache2/htdocs/intex.html
+COPY www/index.html /var/www/index.html
+
+RUN apt-get update && apt-get -y install apache2 && apt-get clean
 
 EXPOSE 80
 

@@ -1,1 +1,1 @@
-/usr/local/apache2/bin/apachectl -D FOREGROUND
+/usr/sbin/apache2ctl start -D FOREGROUND
