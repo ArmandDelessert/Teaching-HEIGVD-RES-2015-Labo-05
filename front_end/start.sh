@@ -1,1 +1,1 @@
-apachectl restart -DFOREGROUND
+apachectl -DFOREGROUND

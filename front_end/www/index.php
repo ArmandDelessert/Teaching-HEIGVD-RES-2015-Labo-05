@@ -5,6 +5,11 @@
 		<script type="text/javascript" src="getStudent.js"></script>
 	</head>
 	<body>		
+		<p>
+			IP du serveur qui a repondu : <?php echo $_SERVER['SERVER_ADDR']; ?>
+			<br/>
+		</p>
+	
 		<h1>Tirer une personne au hasard</h1>
 		
 		<p>
