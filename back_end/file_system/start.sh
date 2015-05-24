@@ -1,3 +1,1 @@
-#!/bin/bash
-node /back_end/app.js &
-/back_end/heartbeat.py
+pm2 start -x app.js --no-daemon

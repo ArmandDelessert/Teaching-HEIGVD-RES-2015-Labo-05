@@ -6,7 +6,7 @@ FROM node:0.12
 #
 # For information: who maintains this Dockerfile?
 #
-MAINTAINER Armand Delessert
+MAINTAINER Simon Baehler
 
 #
 # When we create the image, we copy files from the host into
