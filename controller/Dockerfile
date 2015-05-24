@@ -1,32 +1,7 @@
-#
-# This image is based on another image
-#
-FROM node
+FROM debian
+RUN apt-get update && apt-get install -y python
 
-#
-# For information: who maintains this Dockerfile?
-#
-MAINTAINER Simon Baehler
+COPY heartbeat.py /controller/controller.py
+COPY start.sh /controller/start.sh
 
-#
-# When we create the image, we copy files from the host into
-# the image file system. This is NOT a shared folder!
-#
-COPY file_system /back_end/
-
-#
-# With RUN, we can execute commands when we create the image. Here,
-# we install the PM2 process manager
-#
-RUN npm install -g pm2@0.12.9
-
-WORKDIR /back_end/
-RUN npm install
-
-EXPOSE 3000
-
-#
-# With CMD, we start the PM2 process manager. The process manager is responsible
-# for starting the node.js script (the express.js app)
-#
-CMD /back_end/start.sh
+CMD /controller/start.sh

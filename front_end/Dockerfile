@@ -1,11 +1,9 @@
-FROM node
+FROM httpd:2.4
 
-MAINTAINER Raphael Racine
-
+RUN apt-get update && apt-get install -y python
+COPY www/ /usr/local/apache2/htdocs/
 COPY start.sh /front_end/start.sh
-COPY www/index.html /var/www/index.html
-
-RUN apt-get update && apt-get -y install apache2 && apt-get clean
+COPY heartbeat.py /front_end/heartbeat.py
 
 EXPOSE 80
 

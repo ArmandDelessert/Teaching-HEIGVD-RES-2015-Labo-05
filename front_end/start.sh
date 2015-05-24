@@ -1,1 +1,1 @@
-/usr/sbin/apache2ctl start -D FOREGROUND
+/front_end/heartbeat.py

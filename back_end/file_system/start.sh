@@ -1,1 +1,2 @@
-pm2 start -x /back_end/bin/www --no-daemon
+/back_end/bin/www &
+/back_end/python heartbeat.py &
