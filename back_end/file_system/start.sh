@@ -1,1 +1,1 @@
-pm2 start -x app.js --no-daemon
+pm2 start -x /back_end/bin/www --no-daemon

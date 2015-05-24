@@ -1,7 +1,7 @@
 #
 # This image is based on another image
 #
-FROM node:0.12
+FROM node
 
 #
 # For information: who maintains this Dockerfile?
