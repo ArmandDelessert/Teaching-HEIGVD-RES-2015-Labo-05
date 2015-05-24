@@ -1,1 +1,1 @@
-/front_end/heartbeat.py
+apachectl restart -DFOREGROUND
