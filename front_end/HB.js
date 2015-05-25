@@ -3,27 +3,27 @@
 
 var heartbeats = require('heartbeats');
 var heart = heartbeats.createHeart(5000);
-var payload = "I'M ALIVE";
-var HOWIM = "FRONTEND";
-
-
-heart.createEvent(1, function(heartbeat, last){
-  console.log("Toutes les 5 sec j'envoi le im alive");
-});
 
 
 function sendInfo()
 {
-	var broadcastAddress = "192.168.0.255";
-
-	var message = new Buffer("I'M ALIVE");
+	var PROTOCOL_MULTICAST_ADDRESS = "239.255.22.5";
+	var PROTOCOL_PORT = 6666;
+	var buffer = "FE ";
+	var ip = "<?php echo $_SERVER['SERVER_ADDR']; ?>";
+	buffer = message + ip
+	var message = new Buffer(buffer);
 
 	var client = dgram.createSocket("udp4");
 	client.bind();
 	client.on("listening", function () {
 		client.setBroadcast(true);
-		client.send(message, 0, message.length, 6623, broadcastAddress, function(err, bytes) {
+		client.send(message, 0, message.length, PROTOCOL_PORT, broadcastAddress, function(err, bytes) {
 			client.close();
 		});
 	});
 }
+//tout les battement nous envoyons les infos FE (pour front end) et l'ip de la machine
+heart.createEvent(1, function(heartbeat, last){
+	sendInfo();
+});
