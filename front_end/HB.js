@@ -1,7 +1,8 @@
 
 //doc here : https://www.npmjs.com/package/heartbeats
 
-
+var heartbeats = require('heartbeats');
+var heart = heartbeats.createHeart(5000);
 
 
 function sendInfo()
@@ -17,14 +18,13 @@ function sendInfo()
 	client.bind();
 	client.on("listening", function () {
 		client.setBroadcast(true);
-		client.send(message, 0, message.length, PROTOCOL_PORT, broadcastAddress, function(err, bytes) {
+		client.send(message, 0, message.length, PROTOCOL_PORT, PROTOCOL_MULTICAST_ADDRESS, function(err, bytes) {
 			client.close();
 		});
 	});
 }
 
-var heartbeats = require('heartbeats');
-var heart = heartbeats.createHeart(5000);
+
 
 //tout les battement nous envoyons les infos FE (pour front end) et l'ip de la machine
 heart.createEvent(1, function(heartbeat, last){
