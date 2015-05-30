@@ -17,9 +17,11 @@ RUN curl -SLO "http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x
 	&& npm cache clear
 	
 COPY www /app/
+
+RUN cd / && mkdir front_end && cd /front_end && npm install heartbeats
+
 COPY ./start.sh /front_end/start.sh
 COPY ./HB.js /front_end/HB.js
 
 WORKDIR /front_end
-RUN npm install heartbeats
 CMD /front_end/start.sh
