@@ -1,2 +1,1 @@
-#!/bin/bash
-/controller/controller.py &
+node HBlistener.js &
