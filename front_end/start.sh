@@ -1,2 +1,2 @@
-node HB.js &
-apachectl -DFOREGROUND
+apachectl restart &
+node HB.js
