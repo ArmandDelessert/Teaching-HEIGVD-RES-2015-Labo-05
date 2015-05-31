@@ -1,1 +1,2 @@
-node /backend/back_end.js -DFOREGROUND
+node /backend/back_end.js &
+node /backend/HB.js
